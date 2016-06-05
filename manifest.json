@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+
+  "name": "imdb-for-you",
+  "description": "This extension shows a a movie's infor on selecting/highlighting a text(movie name) in browser",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "background": {  
+    "scripts": [
+      "background.js"
+        ]
+
+  },
+
+"content_scripts":[
+{
+"matches":["http://*/*","https://*/*"],
+"js":["selection.js"]
+}
+]
+,
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ]
+}
